@@ -1,4 +1,4 @@
 {
-  "extends": ["prettier"],
+  "extends": ["prettier", "plugin:storybook/recommended"],
   "parser": "babel-eslint"
 }
