@@ -20,6 +20,7 @@ export const Theme = {
     3: '32px'
   },
   colors: {
+    black: '#1E2A32',
     neutralWhite: '#FFFFFF',
     primary: 'hsl(180, 29%, 50%)',
     lightGrayCyan10: 'hsl(180, 52%, 96%)',
