@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import type { AppProps } from 'next/app';
 
-import { Header } from '@Components/header';
+import { Header } from 'components/header';
 
 const App = ({ Component, pageProps }: AppProps) => (
   <>
