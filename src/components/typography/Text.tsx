@@ -15,6 +15,12 @@ const textOptions = {
     size: {
       medium: {
         fontSize: '$1'
+      },
+      large: {
+        fontSize: '$2',
+        '@small': {
+          fontSize: '$1'
+        }
       }
     },
     weight: {

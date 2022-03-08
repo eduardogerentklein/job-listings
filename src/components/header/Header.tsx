@@ -1,8 +1,8 @@
 import { styled } from 'theme';
 
-type HeaderProps = {
+interface HeaderProps {
   children?: JSX.Element | JSX.Element[];
-};
+}
 
 const headerOptions = {
   backgroundColor: '$primary',
