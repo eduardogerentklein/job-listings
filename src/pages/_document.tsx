@@ -1,5 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 
+import { theme } from 'theme';
+
 export default class MyDocument extends Document {
   render() {
     return (
@@ -26,6 +28,8 @@ export default class MyDocument extends Document {
                 -moz-osx-font-smoothing: grayscale;
                 height: 100%;
                 width: 100%;
+                overflow-x: hidden;
+                background-color: ${theme.colors.lightGrayCyan10};
               }
 
               *, :after, :before {
