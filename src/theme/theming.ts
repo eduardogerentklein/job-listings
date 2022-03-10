@@ -13,22 +13,24 @@ export const Theme = {
   },
   space: {
     1: '4px',
-    2: '12px',
-    3: '16px',
-    4: '24px',
-    5: '28px',
-    6: '32px',
-    7: '35px',
-    8: '40px',
-    9: '45px',
-    10: '48px',
-    11: '56px',
-    12: '64px'
+    2: '8px',
+    3: '12px',
+    4: '16px',
+    5: '24px',
+    6: '28px',
+    7: '32px',
+    8: '35px',
+    9: '40px',
+    10: '45px',
+    11: '48px',
+    12: '56px',
+    13: '64px'
   },
   radii: {
     1: '4px',
     2: '8px',
-    3: '32px'
+    3: '16px',
+    4: '32px'
   },
   shadows: {
     1: '0 0 0 3px rgba(77, 100, 117, 0.25)',
@@ -41,6 +43,7 @@ export const Theme = {
     primary: 'hsl(180, 29%, 50%)',
     lightGrayCyan10: 'hsl(180, 52%, 96%)',
     lightGrayCyan20: 'hsl(180, 31%, 95%)',
+    lightGrayCyan30: 'hsl(180, 41%, 91%)',
     darkGrayCyan10: 'hsl(180, 8%, 52%)',
     darkGrayCyan100: 'hsl(180, 14%, 20%)'
   }
