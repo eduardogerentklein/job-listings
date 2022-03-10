@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 import Image from 'next/image';
 
 import { styled } from 'theme';
-import { Box, Card, Text } from 'components';
+import { Badge, Box, Card, Text } from 'components';
 import data from '../data/data.json';
 
 const Main = styled(Box, {
@@ -24,31 +24,65 @@ const Index: NextPage = () => {
           key={job.company + job.id}
           css={{
             display: 'flex',
-            alignItems: 'center'
+            alignItems: 'center',
+            justifyContent: 'space-between'
           }}
         >
-          <Image
-            width={60}
-            height={60}
-            src={job.logo}
-            alt={`${job.position} at ${job.company}`}
-          />
-          <Box css={{ ml: '$4' }}>
-            <Box css={{ mb: '$2' }}>
-              <Text as='span' appearance='primary' weight='bold'>
-                {job.company}
-              </Text>
-            </Box>
-            <Box css={{ mb: '$2' }}>
-              <Text as='span' weight='bold' size='large'>
-                {job.position}
-              </Text>
-            </Box>
+          <Box appearance='inline' justify='center' align='center'>
             <Box>
-              <Text as='span' appearance='black'>
-                {job.postedAt}
-              </Text>
+              <Image
+                width={60}
+                height={60}
+                src={job.logo}
+                alt={`${job.position} at ${job.company}`}
+              />
             </Box>
+            <Box css={{ ml: '$4' }}>
+              <Box appearance='inline' align='center' css={{ mb: '$2' }}>
+                <Text as='span' appearance='primary' weight='bold'>
+                  {job.company}
+                </Text>
+                {job.new && (
+                  <Badge
+                    radius='lg'
+                    color='white'
+                    bgColor='primary'
+                    textTransform='upper'
+                  >
+                    new!
+                  </Badge>
+                )}
+                {job.featured && (
+                  <Badge
+                    radius='lg'
+                    color='white'
+                    bgColor='black'
+                    textTransform='upper'
+                  >
+                    featured
+                  </Badge>
+                )}
+              </Box>
+              <Box css={{ mb: '$2' }}>
+                <Text as='span' weight='bold' size='large'>
+                  {job.position}
+                </Text>
+              </Box>
+              <Box>
+                <Text as='span' appearance='darkGrayCyan10'>
+                  {job.postedAt}&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+                  {job.contract}&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+                  {job.location}
+                </Text>
+              </Box>
+            </Box>
+          </Box>
+          <Box>
+            {job.languages.map(lang => (
+              <Badge key={lang} color='primary' bgColor='lightGrayCyan30'>
+                {lang}
+              </Badge>
+            ))}
           </Box>
         </Card>
       ))}
