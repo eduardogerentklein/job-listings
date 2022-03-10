@@ -4,7 +4,7 @@ export const Box = styled('div', {
   variants: {
     appearance: {
       normal: {
-        overflow: 'auto'
+        display: 'block'
       },
       inline: {
         display: 'flex'
