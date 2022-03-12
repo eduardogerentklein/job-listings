@@ -4,8 +4,10 @@ export const Theme = {
     spartan: 'Spartan, sans-serif'
   },
   fontSizes: {
-    1: '15px',
-    2: '17px'
+    1: '11px',
+    2: '13px',
+    3: '15px',
+    4: '17px'
   },
   fontWeights: {
     1: '500',
