@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@radix-ui/react-label": "^0.1.5",
+    "@radix-ui/react-separator": "^0.1.4",
     "@stitches/react": "^1.2.7",
     "next": "12.1.0",
     "react": "17.0.2",

@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 import Image from 'next/image';
 
 import { styled } from 'theme';
-import { Badge, Box, Card, Text } from 'components';
+import { Badge, Box, Card, Separator, Text } from 'components';
 import data from '../data/data.json';
 
 const Main = styled(Box, {
@@ -107,9 +107,37 @@ const Index: NextPage = () => {
               </Box>
             </Box>
           </Box>
-          <Box appearance='inline' justify='center' align='center'>
+
+          <Separator
+            orientation='horizontal'
+            css={{
+              '@small': {
+                height: '1px',
+                width: '95%',
+                m: '$2',
+                mt: '$3'
+              }
+            }}
+          />
+
+          <Box
+            appearance='inline'
+            justify='start'
+            align='center'
+            css={{ flexWrap: 'wrap' }}
+          >
             {job.languages.map(lang => (
-              <Badge key={lang} color='primary' bgColor='lightGrayCyan30'>
+              <Badge
+                key={lang}
+                color='primary'
+                bgColor='lightGrayCyan30'
+                css={{
+                  '@small': {
+                    mt: '$2',
+                    mx: '$2'
+                  }
+                }}
+              >
                 {lang}
               </Badge>
             ))}
