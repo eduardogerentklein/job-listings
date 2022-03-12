@@ -18,18 +18,40 @@ const Index: NextPage = () => {
       align='center'
       as='main'
     >
-      {data.map(job => (
+      {data.map((job, index) => (
         <Card
           appearance={job.featured ? 'featured' : 'shadow'}
           key={job.company + job.id}
           css={{
             display: 'flex',
             alignItems: 'center',
-            justifyContent: 'space-between'
+            justifyContent: 'space-between',
+            mt: index === 0 ? '$12' : undefined,
+            '@small': {
+              flexDirection: 'column',
+              alignItems: 'start'
+            }
           }}
         >
-          <Box appearance='inline' justify='center' align='center'>
-            <Box>
+          <Box
+            appearance='inline'
+            justify='center'
+            align='center'
+            css={{
+              '@small': {
+                flexDirection: 'column',
+                alignItems: 'start'
+              }
+            }}
+          >
+            <Box
+              css={{
+                '@small': {
+                  position: 'relative',
+                  top: '-45px'
+                }
+              }}
+            >
               <Image
                 width={60}
                 height={60}
@@ -37,7 +59,15 @@ const Index: NextPage = () => {
                 alt={`${job.position} at ${job.company}`}
               />
             </Box>
-            <Box css={{ ml: '$4' }}>
+            <Box
+              css={{
+                ml: '$4',
+                '@small': {
+                  marginTop: '-$9',
+                  ml: '$2'
+                }
+              }}
+            >
               <Box appearance='inline' align='center' css={{ mb: '$2' }}>
                 <Text as='span' appearance='primary' weight='bold'>
                   {job.company}
@@ -77,7 +107,7 @@ const Index: NextPage = () => {
               </Box>
             </Box>
           </Box>
-          <Box>
+          <Box appearance='inline' justify='center' align='center'>
             {job.languages.map(lang => (
               <Badge key={lang} color='primary' bgColor='lightGrayCyan30'>
                 {lang}
