@@ -33,15 +33,15 @@ export const Badge = styled('span', {
     },
     size: {
       small: {
-        fontSize: '11px'
-      },
-      medium: {
         fontSize: '$1'
       },
+      medium: {
+        fontSize: '$2'
+      },
       large: {
-        fontSize: '$2',
+        fontSize: '$3',
         '@small': {
-          fontSize: '$1'
+          fontSize: '$2'
         }
       }
     },

@@ -13,13 +13,16 @@ const textOptions = {
       }
     },
     size: {
-      medium: {
+      small: {
         fontSize: '$1'
       },
+      medium: {
+        fontSize: '$2'
+      },
       large: {
-        fontSize: '$2',
+        fontSize: '$3',
         '@small': {
-          fontSize: '$1'
+          fontSize: '$2'
         }
       }
     },

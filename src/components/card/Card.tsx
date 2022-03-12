@@ -7,7 +7,8 @@ export const Card = styled('div', {
   my: '$3',
   width: '80vw',
   '@small': {
-    width: '90vw'
+    width: '90vw',
+    my: '$6'
   },
   variants: {
     appearance: {
@@ -21,8 +22,7 @@ export const Card = styled('div', {
         boxShadow: '$3',
         borderWidth: '0px 0px 0px 5px',
         borderStyle: 'solid',
-        borderColor: '$primary',
-        overflow: 'auto'
+        borderColor: '$primary'
       },
       shadow: {
         boxShadow: '$3'

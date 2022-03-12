@@ -5,7 +5,7 @@ import { Colors } from './utils/colors';
 
 export const Label = styled(LabelRadix.Root, {
   fontFamily: '$spartan',
-  fontSize: '$1',
+  fontSize: '$3',
   fontWeight: '$1',
   variants: {
     appearance: Colors
