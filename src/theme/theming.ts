@@ -37,11 +37,11 @@ export const Theme = {
   shadows: {
     1: '0 0 0 3px rgba(77, 100, 117, 0.25)',
     2: '0px 16px 32px rgba(30, 42, 50, 0.08)',
-    3: '0px 6px 10px rgb(166 221 221)'
+    3: '-1px 7px 20px rgb(176 207 207)'
   },
   colors: {
     black: '#1E2A32',
-    neutralWhite: '#FFFFFF',
+    neutralWhite: '#FFFFFFBF',
     primary: 'hsl(180, 29%, 50%)',
     lightGrayCyan10: 'hsl(180, 52%, 96%)',
     lightGrayCyan20: 'hsl(180, 31%, 95%)',

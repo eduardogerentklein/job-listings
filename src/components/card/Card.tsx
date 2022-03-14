@@ -1,14 +1,15 @@
 import { styled } from 'theme';
 
 export const Card = styled('div', {
-  backgroundColor: '$lightGrayCyan20',
+  backgroundColor: '$neutralWhite',
   borderRadius: '$2',
-  p: '$4',
+  p: '$5',
   my: '$3',
   width: '80vw',
   '@small': {
     width: '90vw',
-    my: '$6'
+    my: '$6',
+    p: '$4'
   },
   variants: {
     appearance: {
