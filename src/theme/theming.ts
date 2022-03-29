@@ -41,7 +41,7 @@ export const Theme = {
   },
   colors: {
     black: '#1E2A32',
-    neutralWhite: '#FFFFFFBF',
+    neutralWhite: '#FFFFFF',
     primary: 'hsl(180, 29%, 50%)',
     lightGrayCyan10: 'hsl(180, 52%, 96%)',
     lightGrayCyan20: 'hsl(180, 31%, 95%)',
