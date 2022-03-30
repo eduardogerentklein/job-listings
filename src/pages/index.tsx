@@ -10,16 +10,54 @@ const Main = styled(Box, {
   mb: '$2'
 });
 
+const FilterContainer = styled(Box, {
+  position: 'fixed',
+  top: '125px',
+  left: '140px',
+  '@small': {
+    left: '20px'
+  }
+});
+
 const Index: NextPage = () => {
   const [value, setValue] = useState<string>('');
+  const [jobs, setJobs] = useState(data);
+  const [initialJobs, setInitialJobs] = useState(data);
 
   const handleChange = (e: any) => setValue(e.target.value);
 
+  const handleEnter = (e: any) => {
+    if (e.key === 'Enter' && value) {
+      setJobs(
+        jobs.filter(job =>
+          job.company.toLowerCase().includes(value.toLowerCase())
+        )
+      );
+    }
+    if (!value) setJobs([...initialJobs]);
+  };
+
   return (
     <>
-      <Box>
-        <Input placeHolder='Search' onChange={handleChange} value={value} />
-      </Box>
+      <FilterContainer
+        appearance='inline'
+        direction='column'
+        justify='center'
+        align='center'
+      >
+        <Input
+          css={{
+            width: '80vw',
+            '@small': {
+              width: '90vw'
+            }
+          }}
+          placeHolder='Search'
+          onChange={handleChange}
+          onKeyPress={handleEnter}
+          value={value}
+        />
+      </FilterContainer>
       <Main
         appearance='inline'
         direction='column'
@@ -27,7 +65,7 @@ const Index: NextPage = () => {
         align='center'
         as='main'
       >
-        {data.map((job, index) => (
+        {jobs.map((job, index) => (
           <Card
             appearance={job.featured ? 'featured' : 'shadow'}
             key={job.company + job.id}
@@ -35,7 +73,7 @@ const Index: NextPage = () => {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'space-between',
-              mt: index === 0 ? '$12' : undefined,
+              mt: index === 0 ? '$13' : undefined,
               '@small': {
                 flexDirection: 'column',
                 alignItems: 'start'
