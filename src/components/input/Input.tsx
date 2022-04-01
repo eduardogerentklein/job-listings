@@ -10,6 +10,8 @@ interface InputProps {
 }
 
 const inputOptions = {
+  fontSize: '$2',
+  fontFamily: '$spartan',
   height: '56px',
   outline: 'none',
   lineHeight: '28.8px',

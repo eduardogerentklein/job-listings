@@ -4,16 +4,14 @@ import { useState } from 'react';
 
 import { styled } from 'theme';
 import { Badge, Box, Card, Separator, Text, Input } from 'components';
-import data from '../data/data.json';
+import data from 'data/data.json';
 
 const Main = styled(Box, {
   mb: '$2'
 });
 
 const FilterContainer = styled(Box, {
-  position: 'fixed',
-  top: '125px',
-  left: '140px',
+  marginTop: '-28px',
   '@small': {
     left: '20px'
   }
@@ -73,10 +71,11 @@ const Index: NextPage = () => {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'space-between',
-              mt: index === 0 ? '$13' : undefined,
+              mt: index === 0 ? '$6' : undefined,
               '@small': {
                 flexDirection: 'column',
-                alignItems: 'start'
+                alignItems: 'start',
+                mt: index === 0 ? '$10' : undefined
               }
             }}
           >
