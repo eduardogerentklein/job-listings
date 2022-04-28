@@ -32,12 +32,12 @@ Users should be able to:
 
 ### Built with
  
-- TypeScript
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.Js](https://sass-lang.com/) - CSS pre-processor (SCSS syntax)
-- [Radix-ui](https://jestjs.io/) - Accessible front-end components using Radix-ui
-- [Stitches](https://testing-library.com/docs/react-testing-library/intro/) - React DOM testing utilities
+- [TypeScript](https://www.typescriptlang.org/) TypeScript is a strongly typed programming language that builds on JavaScript.
+- [React](https://reactjs.org/) - JavaScript library for building UI
+- [Next.js](https://nextjs.org/) - React framework with hybrid static & server rendering support
+- [Radix-ui](https://www.radix-ui.com/) - Accessible components for building high‑quality design systems and web apps in React
+- [Stitches](https://stitches.dev/) - CSS-in-JS with near-zero runtime, multi-variant support.
 
 ## Author
 
